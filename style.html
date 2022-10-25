@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">                        
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodWay.com</title>
+
+    <style>
+        
+        /* body  screen and (max-width: 1250px){
+            background-color: red;
+        }
+    
+     */
+
+   
+        /* CSS Reset  */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* CSS Variables  */
+        :root {
+            --navbar-height: 50px;
+        }
+
+        /* Navigation Bar  */
+        #navbar {
+            display: flex;
+            align-items: center;
+            top: 0px;
+            position: relative;
+        }
+
+        /* Navigation Bar: Logo and Image  */
+        #logo {
+            margin: 10px 30px;
+        }
+
+        #logo img {
+            margin: 10px 20px;
+            height: 80px;
+        }
+
+        /* Navigation Bar: List styling  */
+        #navbar ul {
+            display: flex;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        #navbar ul li {
+            list-style: none;
+            font-size: 1.5rem;
+        }
+
+        #navbar ul li a {
+            color: black;
+            display: block;
+            padding: 15px 25px;
+            border-radius: 15px;
+            text-decoration: none;
+        }
+
+        #navbar ul li a:hover {
+            color: yellow;
+            background-color: blue;
+        }
+
+        /* Home Section  */
+        #home {
+            display: flex;
+            flex-direction: column;
+            height: 600px;
+            padding: 5px 200px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #home::before {
+            content: "";
+            background: url(images.jpg) no-repeat center center/cover;
+            position: absolute;
+            height: 86%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.6;
+            top: 0px;
+            left: 0px;
+
+        }
+
+        #home h1 {
+            color: #820831;
+            text-align: center;
+        }
+
+        #home p {
+            color: blue;
+            text-align: center;
+            font-family: cursive;
+            font-size: 1.3rem;
+        }
+
+        /* Services Section  */
+        #services {
+            display: flex;
+            margin: 45px;
+
+        } 
+
+        #services .box {
+            border: 4px solid red;
+            background: #bab3b3;
+            border-radius: 25px;
+            margin: 10px;
+            padding: 20px;
+        }
+
+        #services .box img {
+            height: 160px;
+            display: block;
+            margin: auto;
+        }
+
+        #services .box p {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        /* client-section */
+        #client-section {
+            height: 425px;
+        }
+
+        #client-section::before {
+            content: "";
+            position: absolute;
+            background: url('bg3.png') no-repeat center center/cover;
+            width: 100%;
+            height: 50%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        #clients {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .client-item {
+            margin: 34px;
+            padding: 34px;
+
+        }
+
+        #clients img {
+            height: 150px;
+        }
+
+        /* Contact section  */
+
+        #contact {
+            position: relative;
+        }
+
+        #contact::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.8;
+            background: url('contact2.jpg') no-repeat center center/cover;
+        }
+
+        #contact-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 34px;
+        }
+
+        #contact-box input,
+        #contact-box textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 9px;
+            font-size: 1rem;
+        }
+
+        #contact-box form {
+            width: 40%;
+        }
+
+        #contact-box label {
+            font-size: 1.5rem;
+            font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        footer {
+            background: black;
+            color: white;
+            padding: 9px 20px;
+
+        }
+
+        /* utility classes */
+        .h-primary {
+            font-size: 2.5rem;
+            padding: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .h-secondary {
+            font-size: 2rem;
+            padding: 15px;
+            font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+
+        .btn {
+            padding: 15px 20px;
+            border: 8px rgb(76, 56, 89);
+            background-color: #060d52;
+            border-radius: 8px;
+            color: #0fdee5;
+            margin: 30px 30px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo.jpg" alt="ERROR">
+        </div>
+
+        <ul>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">Services</a></li>
+            <li class="item"><a href="#">About Us</a></li>
+            <li class="item"><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">Welcome to FoodWay.com</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing haefkjh jskdhfwe elit. Ea,gh.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing keguhe ..efbjke elit. Illum </p>
+        <button class="btn">Order Now</button>
+    </section>
+    <hr>
+    <section class="services">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="foodcatering.png" alt="ERROR">
+                <h2 class="h-secondary center">Food Catering</h2>
+                <p>
+                <div class="text-center"></div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed minima
+                soluta architecto facilis numquam harum autem debitis est eius voluptatem maiores repellat, consequuntur
+                sequi itaque culpa. Repellat voluptates cum ratione.</p>
+            </div>
+            <div class="box">
+                <img src="background image.jpg" alt="ERROR">
+                <h2 class="h-secondary center">Bulk Ordering</h2>
+                <p>
+                <div class="text-center"></div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed minima
+                soluta architecto facilis numquam harum autem debitis est eius voluptatem maiores repellat, consequuntur
+                sequi itaque culpa. Repellat voluptates cum ratione.</p>
+            </div>
+            <div class="box">
+                <img src="delievery.png" alt="ERROR">
+                <h2 class="h-secondary center">Food Ordering</h2>
+                <p>
+                <div class="text-center"></div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed minima
+                soluta architecto facilis numquam harum autem debitis est eius voluptatem maiores repellat, consequuntur
+                sequi itaque culpa. Repellat voluptates cum ratione.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="client-section">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="img/brandlogo2.png" alt="Our client">
+            </div>
+            <div class="client-item">
+                <img src="img/brandlogo3.png" alt="Our client">
+            </div>
+            <div class="client-item">
+                <img src="img/brandlogo.png" alt="Our client">
+            </div>
+            <div class="client-item">
+                <img src="img/brandlogo4.png" alt="Our client">
+            </div>
+        </div>
+    </section>
+<hr>
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="name" id="email" placeholder="Enter your EMail">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="phone" name="name" id="phone" placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="center">
+            copyright &copy; www.FoodWay.com. All rights reserved!
+        </div>
+    </footer>
+</body>
+
+</html>
